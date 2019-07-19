@@ -82,12 +82,19 @@
     min-width: 47.5%;
     margin: 0 0 33px;
 }
+.blog-section-item-image {
+    height: 33%;
+}
 .blog-section-item-image img {
     width: 100%;
     height: auto;
 }
 .blog-section-item-body {
     padding: 29px 19px 19px;
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .blog-section-item-body p {
     letter-spacing: 0.4px;

@@ -85,6 +85,9 @@
     color: #333;
     cursor: pointer;
 }
+.btn-submit-comment:hover {
+	background-color: #efc940;
+}
 
 .blog-detail-right {
     margin-top: 58px;
