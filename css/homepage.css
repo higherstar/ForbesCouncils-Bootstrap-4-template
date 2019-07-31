@@ -309,6 +309,9 @@
 	.custom-header h1 {
 		font-size: 24px;
 	}
+	.request-invitation-form {
+		width: 80%;
+	}
 
 	.homepage-heading-section {
 		width: 100% !important;

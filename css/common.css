@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .custom-navbar .container {
 	max-width: 1078px;
+	padding: 12px 0;
 }
 .custom-navbar .logo_container {
 	padding-left: 3px;
