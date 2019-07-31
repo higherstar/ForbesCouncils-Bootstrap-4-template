@@ -4,10 +4,10 @@ $(function() {
 		$(".extra-text").css('display', 'inline');
 	});
 
-	$( "a.btn-find-your-council" ).click(function( event ) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
-    });
+	// $( "a.btn-find-your-council" ).click(function( event ) {
+ //        event.preventDefault();
+ //        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
+ //    });
 
 	function sendEmail(data) {
 		var settings = {
@@ -27,7 +27,7 @@ $(function() {
 		  alert('Email was sent successfully!');
 		});
 	}
-	var emailAddr = 'atahir@adelphatech.com';
+	var emailAddr = 'amacool0117@gmail.com'; //'atahir@adelphatech.com';
     $(".btn-send-contact-email").click(function() {
     	var data = '{"personalizations":[{"to":[{"email":"' + emailAddr + '","name":"receiver"}],"dynamic_template_data":{"email":"' + $("#email").val() + '","firstName":"' + $("#firstName").val() + '","lastName":"' + $("#lastName").val() + '","phone":"' + $("#phone").val() + '","membership":"' + $("#membership").val() + '"},"subject":"contact"}],"from":{"email":"' + $("#email").val() + '","name":"' + $("#firstName").val() + ' ' + $("#lastName").val() + '"},"reply_to":{"email":"'+ emailAddr + '","name":"receiver"},"template_id":"d-5c7718392d604968b24cb90ee758df1f"}"}';
 		sendEmail(data);
@@ -40,6 +40,11 @@ $(function() {
 
     $(".btn-send-comment-email").click(function() {
     	var data = '{"personalizations":[{"to":[{"email":"' + emailAddr + '","name":"receiver"}],"dynamic_template_data":{"email":"' + $("#email").val() + '","name":"' + $("#name").val() + '","website":"' + $("#website").val() + '","comment":"' + $("#comment").val() + '"},"subject":"contact"}],"from":{"email":"' + $("#email").val() + '","name":"sender"},"reply_to":{"email":"' + emailAddr + '","name":"receiver"},"template_id":"d-ef82fbd294284dadac4c4cbea4a2b3c8"}"}';
+		sendEmail(data);
+    });
+
+    $(".btn-find-your-council").click(function() {
+    	var data = '{"personalizations":[{"to":[{"email":"' + emailAddr + '","name":"receiver"}],"dynamic_template_data":{"email":"' + $("#email").val() + '","firstName":"' + $("#firstName").val() + '","lastName":"' + $("#lastName").val() + '","phone":"' + $("#phone").val() + '","type":"' + $("#type").val() + '","firstName1":"' + $("#firstName1").val() + '","lastName1":"' + $("#lastName1").val() + '","linkedIn":"' + $("#linkedIn").val() + '","companyName":"' + $("#companyName").val() + '","companyPosition":"' + $("#companyPosition").val() + '","companyWebsite":"' + $("#companyWebsite").val() + '","membership":"' + $("#membership").val() + '"},"subject":"first email"}],"from":{"email":"' + $("#email").val() + '","name":"' + $("#firstName").val() + ' ' + $("#lastName").val() + '"},"reply_to":{"email":"' + emailAddr + '","name":"receiver"},"template_id":"d-cdd65a3cca29433cb7ea864245581e02"}"}';
 		sendEmail(data);
     });
 });

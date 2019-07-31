@@ -29,8 +29,18 @@ h1, h2, h3, h4, h5, h6 {
 .custom-navbar .logo_container {
 	padding-left: 3px;
 }
-.custom-navbar .logo_container img {
+.custom-navbar .logo_container >  a {
+	display: flex;
+	text-decoration: none;
+}
+.logo-word {
 	height: 30px;
+	font-size: 40px;
+	font-weight: 700;
+	color: white;
+}
+.logo-word-footer {
+	color: #5f5f5f;
 }
 .custom-navbar .navbar-nav .nav-link {
     padding: 13px 26px 12px !important;
