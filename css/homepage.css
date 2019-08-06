@@ -19,7 +19,7 @@
     margin: 5px auto 80px !important;
 }
 .btn-find-your-council {
-	padding: 18px 26px!important;
+	padding: 18px 26px;
     font-size: 16px;
     background: #f7de42;
     border-width: 10px!important;
@@ -55,10 +55,16 @@
 .request-invitation-form label {
 	color: white;
 }
+.request-invitation-form input {
+	text-align: left;
+}
+.btn-send-email {
+	padding: 12px 26px;
+}
 
 .homepage-heading-section {
     width: 80%;
-    margin: 80px auto 10px;
+    margin: 80px auto 60px;
     text-align: center;
 }
 .homepage-heading-section h2 {
