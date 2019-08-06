@@ -4,10 +4,10 @@ $(function() {
 		$(".extra-text").css('display', 'inline');
 	});
 
-	// $( "a.btn-find-your-council" ).click(function( event ) {
- //        event.preventDefault();
- //        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
- //    });
+	$( "a.btn-find-your-council" ).click(function( event ) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 800);
+    });
 
 	function sendEmail(data) {
 		var settings = {
@@ -27,7 +27,7 @@ $(function() {
 		  alert('Email was sent successfully!');
 		});
 	}
-	var emailAddr = 'amacool0117@gmail.com'; //'atahir@adelphatech.com';
+	var emailAddr = 'info@swag.xyz';
     $(".btn-send-contact-email").click(function() {
     	var data = '{"personalizations":[{"to":[{"email":"' + emailAddr + '","name":"receiver"}],"dynamic_template_data":{"email":"' + $("#email").val() + '","firstName":"' + $("#firstName").val() + '","lastName":"' + $("#lastName").val() + '","phone":"' + $("#phone").val() + '","membership":"' + $("#membership").val() + '"},"subject":"contact"}],"from":{"email":"' + $("#email").val() + '","name":"' + $("#firstName").val() + ' ' + $("#lastName").val() + '"},"reply_to":{"email":"'+ emailAddr + '","name":"receiver"},"template_id":"d-5c7718392d604968b24cb90ee758df1f"}"}';
 		sendEmail(data);
@@ -43,7 +43,7 @@ $(function() {
 		sendEmail(data);
     });
 
-    $(".btn-find-your-council").click(function() {
+    $(".btn-send-email").click(function() {
     	var data = '{"personalizations":[{"to":[{"email":"' + emailAddr + '","name":"receiver"}],"dynamic_template_data":{"email":"' + $("#email").val() + '","firstName":"' + $("#firstName").val() + '","lastName":"' + $("#lastName").val() + '","phone":"' + $("#phone").val() + '","type":"' + $("#type").val() + '","firstName1":"' + $("#firstName1").val() + '","lastName1":"' + $("#lastName1").val() + '","linkedIn":"' + $("#linkedIn").val() + '","companyName":"' + $("#companyName").val() + '","companyPosition":"' + $("#companyPosition").val() + '","companyWebsite":"' + $("#companyWebsite").val() + '","membership":"' + $("#membership").val() + '"},"subject":"first email"}],"from":{"email":"' + $("#email").val() + '","name":"' + $("#firstName").val() + ' ' + $("#lastName").val() + '"},"reply_to":{"email":"' + emailAddr + '","name":"receiver"},"template_id":"d-cdd65a3cca29433cb7ea864245581e02"}"}';
 		sendEmail(data);
     });
