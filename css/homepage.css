@@ -16,7 +16,7 @@
     font-size: 38px;
     line-height: 1.7em;
     max-width: 800px;
-    margin: 5px auto 80px !important;
+    margin: 60px auto !important;
 }
 .btn-find-your-council {
 	padding: 18px 26px;
@@ -57,6 +57,11 @@
 }
 .request-invitation-form input {
 	text-align: left;
+}
+.request-invitation-form .form-control:focus {
+	border-color: #fff2a1;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #fff2a1;
 }
 .homepage-heading-section {
     width: 80%;
@@ -253,6 +258,33 @@
 }
 .btn-apply-invitation {
 	display: inline-block;
+}
+.btn-send-email {
+	background-color: #f7de42;
+	color: black;
+	border: solid 1px #f7de42;
+}
+.btn-send-email:hover {
+	background-color: #e8d13b;
+	color: black;
+	border: solid 1px #e8d13b;
+}
+.btn-send-email:active {
+	background-color: #e8d13b !important;
+	color: black !important;
+	border: solid 1px #e8d13b !important;
+	outline: none;
+}
+.btn-send-email:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.2rem rgb(255, 245, 183) !important;
+}
+.custom-control-input:checked~.custom-control-label::before {
+	background-color: #ffc107 !important;
+	border-color: #ffc107 !important;
+}
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem #f7de42;
 }
 
 @media (max-width: 980px) {
