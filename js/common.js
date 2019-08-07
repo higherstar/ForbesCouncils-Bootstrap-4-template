@@ -4,10 +4,10 @@ $(function() {
 		$(".extra-text").css('display', 'inline');
 	});
 
-	$( "a.btn-find-your-council" ).click(function( event ) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, 800);
-    });
+	// $( "a.btn-find-your-council" ).click(function( event ) {
+ //        event.preventDefault();
+ //        $("html, body").animate({ scrollTop: 0 }, 800);
+ //    });
 
 	function sendEmail(data) {
 		var settings = {
@@ -24,7 +24,7 @@ $(function() {
 		};
 
 		$.ajax(settings).done(function (response) {
-		  alert('Email was sent successfully!');
+		  location.href = "./index-thank-you.html";
 		});
 	}
 	var emailAddr = 'info@swag.xyz';
